@@ -7,7 +7,6 @@ const buttonTwo = document.querySelector('.two');
 const buttonThree = document.querySelector('.three');
 const buttonFour = document.querySelector('.four');
 
-
 // BUTTON ONE
 buttonOne.addEventListener('click', changeColorOne);
 function changeColorOne() {
@@ -61,18 +60,15 @@ const compArray = [];
 let startButton = document.querySelector('.play');
 startButton.addEventListener('click', chooseRandomItem);
 
-
 function chooseRandomItem(event) {
     turnCounter.innerHTML = 'Round 1';
     startButton.style.backgroundColor = "grey";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
 
-
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
     }, 400);
-  
 
     compArray.push(randomItem);
 
@@ -80,60 +76,57 @@ function chooseRandomItem(event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
         console.log(userInput)
-        turnTwo();
+        setTimeout(() => { turnTwo() }, 600);
     }, false);
     console.log(compArray)
 };
 
 // TURN TWO
-
 function turnTwo(event) {
     turnCounter.innerHTML = 'Round 2';
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
 
+    // randomItem.style.backgroundColor = randomItem.dataset.color = 'yellow';
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
     }, 600);
-  
-
     compArray.push(randomItem);
-    
+
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
         console.log(userInput)
-        turnThree();
+        setTimeout(() => { turnThree() }, 600);
     }, false);
     console.log(compArray)
 };
 
 // TURN THREE
-
 function turnThree(event) {
     turnCounter.innerHTML = 'Round 3';
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
 
+    randomItem.style.backgroundColor = randomItem.dataset.color = 'yellow';
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 1200);
-
-    console.log(compArray)
+    }, 600);
 
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
         console.log(userInput)
-        turnFour();
+        setTimeout(() => { turnFour() }, 600);
     }, false);
     console.log(compArray)
 };
 
 // // TURN FOUR
-
 function turnFour(event) {
     turnCounter.innerHTML = 'Round 4';
     startButton.style.backgroundColor = "white";
@@ -142,14 +135,13 @@ function turnFour(event) {
 
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 2000);
-    console.log(compArray)
+    }, 600);
 
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
         console.log(userInput)
-        turnFive();
+        setTimeout(() => { turnFive() }, 600);
     }, false);
     console.log(compArray)
 };
@@ -168,9 +160,7 @@ function turnFive(event) {
 
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 2500);
-    
-    console.log(compArray)
+    }, 600);
 
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.button')) return;
@@ -180,134 +170,3 @@ function turnFive(event) {
     }, false);
     console.log(compArray)
 };
-
-
-
-
-
-// //  RANDOM GENERATOR 3
-// let randomItemThree = gameArray[Math.floor(Math.random() * gameArray.length)];
-
-// function turnThree() {
-//     turnCounter.innerHTML = 'Round 3';
-//     startButton.style.backgroundColor = "white";
-//     compArray.push(randomItemThree);
-//     console.log(compArray);
-
-//     let userArrayThree = [];
-//     console.log('turnThree running')
-//     document.addEventListener('click', function (event) {
-//         if (!event.target.matches('.button')) return;
-//         event.preventDefault();
-//         var userInputThree = (event.target);
-//         userArrayThree.push(userInputThree);
-//         console.log(userArrayThree);
-//         if (userArrayThree[0] == compArray[3]) {
-//             turnFour();
-//         };
-//     }, false);
-
-//     // document.removeEventListener('click', turnThree);
-
-// };
-
-
-// //  RANDOM GENERATOR 4
-// let randomItemFour = gameArray[Math.floor(Math.random() * gameArray.length)];
-
-// function turnFour() {
-//     turnCounter.innerHTML = 'Round 4';
-//     startButton.style.backgroundColor = "white";
-//     compArray.push(randomItemFour);
-//     console.log(compArray);
-
-//     let userArrayFour = [];
-
-//     document.addEventListener('click', function (event) {
-//         if (!event.target.matches('.button')) return;
-//         event.preventDefault();
-//         var userInputFour = (event.target);
-//         userArrayFour.push(userInputFour);
-//         console.log(userArrayFour);
-//         if (userArrayFour[0] == compArray[6]) {
-//             turnFive();
-//         };
-//     }, false);
-
-//     // document.removeEventListener('click', this);
-
-// };
-
-
-// function showAlert() {
-//     alert('YOU WIN!');
-// };
-
-// //  RANDOM GENERATOR 5
-// let randomItemFive = gameArray[Math.floor(Math.random() * gameArray.length)];
-
-// function turnFive() {
-//     turnCounter.innerHTML = 'Round 5';
-//     startButton.style.backgroundColor = "white";
-//     compArray.push(randomItemFive);
-//     console.log(compArray);
-
-//     let userArrayFive = [];
-
-//     document.addEventListener('click', function (event) {
-//         if (!event.target.matches('.button')) return;
-//         event.preventDefault();
-//         var userInputFive = (event.target);
-//         userArrayFive.push(userInputFive);
-//         console.log(userArrayFive);
-//         if (userArrayFive[0] == compArray[11]) {
-//             showAlert();
-//         };
-//     }, false);
-
-//     // document.removeEventListener('click', this);
-
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-// SCORES
-// track scores across games
-
-
-
-// ROUNDS
-
-
-
-
-
-// Array (user)
-    // this array stores the clicks of the user.
-    // if array is equal to computer array, computer runs function to make the next array.
-
-
-// Array within an array (computer)
-    // Put buttons in an array. 
-
-
-
-// Random Generator
-    // must choose an integer between 1 & 4 [0, 1, 2, 3] at random.
-
-    // That number that is stored in an array.
-
-    // each turn that array is copied, one more number is added to the array.
-
-
-    // array stops at 10 (>11) rounds.
-    // GOLD VERSION would include adding new levels increasing round by 10).
