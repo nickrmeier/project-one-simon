@@ -21,4 +21,18 @@ PRIMARY LANGUAGES USED:
 2. CSS3
 3. Javascript 1.8.5
 
+PROGRAMS & RESOURCES USED:
+1. Visual Studio Code
+2. Code Pen
+3. GitHub
+4. YouTube
+5. W3Schools
+6. Mozilla MDN
 
+<!-- INSTALLATION INSTRUCTION -->
+
+To set up the app locally on your own system:
+
+1. Fork and clone this repository.  
+2. Open directory 'project-one-simon' with Visual Studio Code.
+3. Open in Browser with Live Server.
