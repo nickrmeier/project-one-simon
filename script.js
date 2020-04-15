@@ -67,9 +67,13 @@ function chooseRandomItem(event) {
     startButton.style.backgroundColor = "grey";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
+
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 500);
+    }, 400);
+  
+
     compArray.push(randomItem);
 
     document.addEventListener('click', function (event) {
@@ -88,11 +92,14 @@ function turnTwo(event) {
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 2000);
+    }, 600);
+  
 
     compArray.push(randomItem);
+    
     document.addEventListener('click', function (event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
@@ -109,9 +116,11 @@ function turnThree(event) {
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 4000);
+    }, 1200);
+
     console.log(compArray)
 
     document.addEventListener('click', function (event) {
@@ -123,16 +132,17 @@ function turnThree(event) {
     console.log(compArray)
 };
 
-// TURN FOUR
+// // TURN FOUR
 
 function turnFour(event) {
     turnCounter.innerHTML = 'Round 4';
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 5000);
+    }, 2000);
     console.log(compArray)
 
     document.addEventListener('click', function (event) {
@@ -144,7 +154,7 @@ function turnFour(event) {
     console.log(compArray)
 };
 
-// TURN FIVE
+// // TURN FIVE
 
 function showAlert() {
     alert('YOU WIN!');
@@ -155,9 +165,11 @@ function turnFive(event) {
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
+
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
-    }, 8000);
+    }, 2500);
+    
     console.log(compArray)
 
     document.addEventListener('click', function (event) {
@@ -168,28 +180,6 @@ function turnFive(event) {
     }, false);
     console.log(compArray)
 };
-
-
-
-// function turnThree() {
-//     turnCounter.innerHTML = 'Round 3';
-//     startButton.style.backgroundColor = "white";
-//     chooseRandomItem();
-//     console.log(compArray);
-
-//     let userArrayThree = [];
-
-//     document.addEventListener('click', function (event) {
-//         if (!event.target.matches('.button')) return;
-//         var userInputThree = (event.target);
-//         userArrayThree.push(userInputThree);
-//         console.log(userArrayThree);
-//         if (userArrayThree[0] == compArray[1]) {
-//             turnFour();
-//         };
-//     }, false);
-// };
-
 
 
 
