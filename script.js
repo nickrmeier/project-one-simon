@@ -88,8 +88,6 @@ function turnTwo(event) {
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
     randomItem.style.backgroundColor = "yellow";
 
-    // randomItem.style.backgroundColor = randomItem.dataset.color = 'yellow';
-
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
     }, 600);
@@ -100,6 +98,7 @@ function turnTwo(event) {
         let userInput = (event.target);
         console.log(userInput)
         setTimeout(() => { turnThree() }, 600);
+        // turnThree();
     }, false);
     console.log(compArray)
 };
@@ -109,9 +108,7 @@ function turnThree(event) {
     turnCounter.innerHTML = 'Round 3';
     startButton.style.backgroundColor = "white";
     let randomItem = gameArray[Math.floor(Math.random() * gameArray.length)];
-    randomItem.style.backgroundColor = "yellow";
-
-    randomItem.style.backgroundColor = randomItem.dataset.color = 'yellow';
+    randomItem.style.backgroundColor = "yellow";;
 
     setTimeout(function () {
         randomItem.style.backgroundColor = randomItem.dataset.color
@@ -121,7 +118,8 @@ function turnThree(event) {
         if (!event.target.matches('.button')) return;
         let userInput = (event.target);
         console.log(userInput)
-        setTimeout(() => { turnFour() }, 600);
+        setTimeout(() => { turnFour() }, 600);0
+        // turnFour();
     }, false);
     console.log(compArray)
 };
